@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="uk">
+    <head>
+        <meta charset="utf-8"/>
+        <title></title>
+        <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8,IE=edge"/>
+        <meta content="width=device-width, initial-scale=1" name="viewport"/>
+        <!-- Fonts -->
+        <link href="fonts/SegoeUI/fonts.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <!-- PAGE LEVEL PLUGIN STYLES -->
+        <link href="css/normalize.css" rel="stylesheet">
+        <!-- THEME STYLES -->
+        <link href="css/points-exchange.css" rel="stylesheet" type="text/css"/>
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="img/system/icon/favicon.ico"/>
+    </head>
+
+    <body>
+
+        <main class="main__container">
+            <div class="exchange">
+                <h1 class="exchange__title">Обмін балів</h1>
+
+                <div class="exchange__header">
+                    <div style="display: flex;">
+                        <div class="available_score">Доступно балів:</div>
+                        <div class="parent_score">10 100</div>
+                    </div>
+    
+                    <div class="cart_shop_wrapper cart-box_open">
+                        <div class="cart_icon" ng-click="loadCardButton(false)">
+                            <img src="img/shopping-cart1.svg" alt="icon">
+                        </div>
+                        <div id="cart_shop_value" ng-click="loadCardButton(false)">12</div>
+                    </div>
+                </div>
+
+                <div class="sort_wrapper">
+                    <label for="sort_select">Сортувати</label>
+                    <select onchange="javascript:filter_group('2')" id="sort_select">
+                        <option value="1" selected="&quot;selected&quot;">від дешевих до дорогих</option>
+                        <option value="2">від дорогих до дешевих</option>
+                    </select>
+                </div>
+
+                <ul class="gift__list">
+                    <li class="gift__item">
+                        <div id="pic_box_0">
+                            <img src="https://www.delivery-auto.com/Images/DeliveryGroup/Gifts/mobile_ticket@3x.png" class="picture_size" onclick="javascript:show_good_page(0)">
+                        </div>
+
+                        <p class="gift__title" onclick="javascript:show_good_page(0)">Картка поповнення рахунку</p>
+                        <p class="gift__description" id="description_page">Можливість розмістити інформацію про Вашу компанію на представництві Делівері (візитки, листівки, буклети)</p>
+                        
+                        <div class="cost_wrapper">
+                            <div class="cost_info">
+                                <!-- Если "немає в наявності" тогда просто без иконки зеленой птички -->
+                                <p class="state_style"> <img src="img/green bird.svg" alt="icon"> Є в наявності</p>
+    
+                                <div class="cost_block">
+                                    <span class="cost">1 020</span>
+                                    <p>балів</p>
+                                </div>
+                            </div>
+                            
+                            <div id="btn_box_0" class="change_button cart-box_open" ng-click="are_you_sure('7d541fe2-09ad-4d69-8b4b-e890fc1ba8ce', '1020', 'Картка поповнення рахунку', 'https://www.delivery-auto.com/Images/DeliveryGroup/Gifts/mobile_ticket@3x.png', 'False');">Обміняти</div>
+                        </div>
+                    </li>
+
+                    <!-- next  -->
+
+                    <li class="gift__item">
+                        <div id="pic_box_0">
+                            <img src="https://www.delivery-auto.com/Images/DeliveryGroup/Gifts/cap@3x.png" class="picture_size" onclick="javascript:show_good_page(1)">
+                        </div>
+
+                        <p class="gift__title" onclick="javascript:show_good_page(1)">Чашка</p>
+                        <p class="gift__description" id="description_page">Чашка MODERN керамічна, 350 мл</p>
+                        
+                        <div class="cost_wrapper">
+                            <div class="cost_info">
+                                <!-- Если "немає в наявності" тогда просто без иконки зеленой птички -->
+                                <p class="state_style">Немає в наявності</p>
+    
+                                <div class="cost_block">
+                                    <span class="cost">2 020</span>
+                                    <p>балів</p>
+                                </div>
+                            </div>
+                            
+                            <div id="btn_box_0" class="change_button cart-box_open" ng-click="are_you_sure('7d541fe2-09ad-4d69-8b4b-e890fc1ba8ce', '1020', 'Картка поповнення рахунку', 'https://www.delivery-auto.com/Images/DeliveryGroup/Gifts/mobile_ticket@3x.png', 'False');">Обміняти</div>
+                        </div>
+                    </li>
+
+                    <!-- next  -->
+
+                    <li class="gift__item">
+                        <div id="pic_box_0">
+                            <img src="https://www.delivery-auto.com/Images/DeliveryGroup/Gifts/cap@3x.png" class="picture_size" onclick="javascript:show_good_page(1)">
+                        </div>
+
+                        <p class="gift__title" onclick="javascript:show_good_page(1)">Чашка</p>
+                        <p class="gift__description" id="description_page">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro, eius ipsum totam hic nam est voluptatem asperiores natus explicabo magnam!</p>
+                        
+                        <div class="cost_wrapper">
+                            <div class="cost_info">
+                                <!-- Если "немає в наявності" тогда просто без иконки зеленой птички -->
+                                <!-- <p class="state_style"> <img src="img/green bird.svg" alt="icon"> Є в наявності</p> -->
+                                <p class="state_style">Немає в наявності</p>
+    
+                                <div class="cost_block">
+                                    <span class="cost">2 020</span>
+                                    <p>балів</p>
+                                </div>
+                            </div>
+                            
+                            <div id="btn_box_0" class="change_button cart-box_open" ng-click="are_you_sure('7d541fe2-09ad-4d69-8b4b-e890fc1ba8ce', '1020', 'Картка поповнення рахунку', 'https://www.delivery-auto.com/Images/DeliveryGroup/Gifts/mobile_ticket@3x.png', 'False');">Обміняти</div>
+                        </div>
+                    </li>
+
+                </ul>
+                <!-- Корзина  -->
+                <div id="cart-box">
+                    <form class="popup-main">
+                        <h1 class="exchange__title">Кошик</h1>
+                        
+                        <div style="display: flex; margin-top: 10px;">
+                            <div class="available_score">Доступно балів:</div>
+                            <div class="parent_score">10 100</div>
+                        </div>
+        
+                        <ul class="cart-gift">
+                            <li class="cart-gift__item">
+                                <div style="display: flex;">
+                                    <img src="http://www.delivery-auto.com/Images/DeliveryGroup/Gifts/mobile_ticket@3x.png">
+                                    <div class="cart-gift__item-info">
+                                        <h5 class="card_shop_name">Талон на бензин</h5>
+                                        <p><span id="points_1" class="card_shop_cost">7 000 </span>балів</p>
+                                    </div>
+                                </div>
+        
+                                <div class="add-more">
+                                    <div class="card_shop_num_wrapper">
+                                        <div class="card_shop_num_operation" ng-click="change_number_angular(1, 0, 2000, 0, -1)">-</div>
+                                        <div id="number_1" class="card_shop_num">1</div>
+                                        <div class="card_shop_num_operation" ng-click="change_number_angular(1, 1, 2000, 0, -1)">+</div>
+                                    </div>
+                                    <p class="card_shop_score__wrapper">
+                                        <span id="goods_cost_1" class="card_shop_score_good">2000</span> 
+                                        балів
+                                    </p>
+                                </div>
+        
+                                <div onclick="javascript:delete_good('goods_block_1', 'b7dae877-b183-4cb7-9748-d37cc91fdade')" class="card_shop_delete_button">
+                                    <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 1L10.5 10.5M10.5 1L1 10.5" stroke="#999999"/>
+                                    </svg>
+                                </div>
+                            </li>
+        
+                            <!-- next  -->
+        
+                            <li class="cart-gift__item">
+                                <div style="display: flex;">
+                                    <img src="http://www.delivery-auto.com/Images/DeliveryGroup/Gifts/mobile_ticket@3x.png">
+                                    <div class="cart-gift__item-info">
+                                        <h5 class="card_shop_name">Картка поповнення рахунку</h5>
+                                        <p><span id="points_1" class="card_shop_cost">100 </span>балів</p>
+                                    </div>
+                                </div>
+        
+                                <div class="add-more">
+                                    <div class="card_shop_num_wrapper">
+                                        <div class="card_shop_num_operation" ng-click="change_number_angular(1, 0, 2000, 0, -1)">-</div>
+                                        <div id="number_1" class="card_shop_num">1</div>
+                                        <div class="card_shop_num_operation" ng-click="change_number_angular(1, 1, 2000, 0, -1)">+</div>
+                                    </div>
+                                    <p class="card_shop_score__wrapper">
+                                        <span id="goods_cost_1" class="card_shop_score_good">100</span> 
+                                        балів
+                                    </p>
+                                </div>
+        
+                                <div onclick="javascript:delete_good('goods_block_1', 'b7dae877-b183-4cb7-9748-d37cc91fdade')" class="card_shop_delete_button">
+                                    <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 1L10.5 10.5M10.5 1L1 10.5" stroke="#999999"/>
+                                    </svg>
+                                </div>
+                            </li>
+        
+                            <!-- next  -->
+        
+                            <li class="cart-gift__item">
+                                <div style="display: flex;">
+                                    <img src="http://www.delivery-auto.com/Images/DeliveryGroup/Gifts/mobile_ticket@3x.png">
+                                    <div class="cart-gift__item-info">
+                                        <h5 class="card_shop_name">Картка</h5>
+                                        <p><span id="points_1" class="card_shop_cost">10000 </span>балів</p>
+                                    </div>
+                                </div>
+        
+                                <div class="add-more">
+                                    <div class="card_shop_num_wrapper">
+                                        <div class="card_shop_num_operation" ng-click="change_number_angular(1, 0, 2000, 0, -1)">-</div>
+                                        <div id="number_1" class="card_shop_num">1</div>
+                                        <div class="card_shop_num_operation" ng-click="change_number_angular(1, 1, 2000, 0, -1)">+</div>
+                                    </div>
+                                    <p class="card_shop_score__wrapper">
+                                        <span id="goods_cost_1" class="card_shop_score_good">10000</span> 
+                                        балів
+                                    </p>
+                                </div>
+        
+                                <div onclick="javascript:delete_good('goods_block_1', 'b7dae877-b183-4cb7-9748-d37cc91fdade')" class="card_shop_delete_button">
+                                    <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 1L10.5 10.5M10.5 1L1 10.5" stroke="#999999"/>
+                                    </svg>
+                                </div>
+                            </li>
+                        </ul>
+        
+                        <div class="total_score__wrapper">
+                            <button class="change_button change_button--white popup_close" title="Close" aria-label="Close" style="font-size: 13px;">Продовжити обмін</button>
+                            <div class="total_score__inner">
+                                <p>Разом:</p>
+                                <p><span id="total_score_id">19 200</span> балів</p>
+                            </div>
+                        </div>
+        
+                        <div class="card_shop_user_info">Iнформація одержувача:</div>
+        
+                        <div class="user-info">
+                            <!-- Склад -->
+                            <div id="warehouse_block">
+                                <div class="card_shop_user_rows">
+                                    <div>
+                                        <select id="warehouse_id">
+                                            <option value="-1" selected style="display: none;">Склад прибуття</option>
+                                            <option value="1c828aa6-70c8-e211-9902-00155d037919">АВДІЇВКА</option>
+                                            <option value="bd0d6c49-6cb0-ea11-81cb-000d3a20e396">АНАНЬЇВ</option>
+                                            <option value="dc66026b-482c-e811-8158-000d3a20e396">АНДРУШІВКА</option>
+                                            <option value="b62a29dd-8c63-e611-80fd-000d3a204dc8">АРЦИЗ</option>
+                                            <option value="34ed1105-012c-e311-8b0d-00155d037960">БАЛАКЛІЯ</option>
+                                            <option value="acb2708b-c338-e411-b1f2-000d3a200936">БАЛТА</option>
+                                            <option value="ad99b2d2-97be-e911-81a3-000d3a20e396">БАРАНІВКА</option>
+                                            <option value="6bbee295-9575-e611-8104-000d3a204dc8">БАХМАЧ</option>
+                                            <option value="d908c5e1-b36b-e211-81e9-00155d012a15">БАХМУТ</option>
+                                            <option value="0f6a9a35-10b3-e611-8112-000d3a204dc8">БАШТАНКА</option>
+                                            <option value="376f9215-bc6b-e211-81e9-00155d012a15">БЕРДИЧІВ</option>
+                                            <option value="bd75fa76-0a49-e211-ab75-00155d012d0d">БЕРДЯНСЬК</option>
+                                            <option value="5d98be9a-0c3b-e311-9f8c-00155d037960">БЕРЕГОВЕ</option>
+                                            <option value="7450854f-873e-ea11-81b3-000d3a20e396">БЕРЕЖАНИ</option>
+                                            <option value="4d8727dc-8213-e611-80db-000d3a2187cd">БЕРЕЗАНЬ</option>
+                                            <option value="1594cfcc-210e-eb11-81e0-000d3a20e396">БЕРИСЛАВ</option>
+                                            <option value="cd94dfbe-3319-eb11-81e3-000d3a20e396">БЕРШАДЬ</option>
+                                            <option value="0e1e56a0-bb6b-e211-81e9-00155d012a15">БІЛА ЦЕРКВА-1</option>
+                                            <option value="36e10153-823d-e811-815c-000d3a20e396">БІЛА ЦЕРКВА-2</option>
+                                            <option value="b93a6d45-b249-e211-ab75-00155d012d0d">БІЛГОРОД-ДНІСТРОВСЬКИЙ</option>
+                                            <option value="07738ae3-88a5-ea11-81ca-000d3a20e396">БІЛИЦЬКЕ</option>
+                                            <option value="d8c371dd-a8a2-e611-8110-000d3a204dc8">БІЛОВОДСЬК</option>
+                                            <option value="81cd845c-5260-e911-819c-000d3a20e396">БІЛОЗЕРСЬКЕ</option>
+                                            <option value="8b3694bd-3080-e811-816e-000d3a20e396">БІЛОКУРАКИНЕ</option>
+                                            <option value="074f0072-4906-e711-8126-000d3a204dc8">БОБРИНЕЦЬ</option>
+                                            <option value="7e970b8f-d22e-e611-80eb-000d3a204dc8">БОГОДУХІВ</option>
+                                            <option value="cb2178bc-3a9b-e511-8618-000d3a200160">БОЛГРАД</option>
+                                            <option value="6d21c426-7ca3-e711-8146-000d3a23e81c">БОРИСЛАВ</option>
+                                            <option value="2eec377d-da49-e211-9515-00155d012d0d">БОРИСПІЛЬ-1</option>
+                                            <option value="950c9ba2-73ca-ea11-81cc-000d3a20e396">БОРОДЯНКА</option>
+                                            <option value="7f4f530b-c25e-ea11-81ba-000d3a20e396">БОРЩІВ</option>
+                                            <option value="a2a175cc-4a2c-e811-8158-000d3a20e396">БОЯРКА</option>
+                                            <option value="3a8b2ca7-da49-e211-9515-00155d012d0d">БРОВАРИ-1</option>
+                                            <option value="56eedc49-f258-e411-afed-000d3a200936">БРОВАРИ-2</option>
+                                            <option value="95298034-4b6b-e411-8576-000d3a200160">БРОДИ</option>
+                                            <option value="57cb2e9e-75d2-ea11-81cd-000d3a20e396">БУРШТИН</option>
+                                            <option value="f23de092-9f75-e611-8104-000d3a204dc8">БУСЬК</option>
+                                            <option value="381c413e-bf6b-e211-81e9-00155d012a15">БУЧА</option>
+                                            <option value="336ebd83-6fc1-e811-817c-000d3a20e396">БУЧАЧ (Тернопільська обл)</option>
+                                            <option value="b154a29e-a739-e911-8194-000d3a20e396">ВАЛКИ</option>
+                                            <option value="5ac4172d-630f-e511-b3b5-000d3a200160">ВАРАШ</option>
+                                            <option value="df4d3f26-4bf4-e611-8123-000d3a204dc8">ВАСИЛІВКА</option>
+                                            <option value="72a720e5-552c-e511-9ea9-000d3a200160">ВАСИЛЬКІВ</option>
+                                            <option value="ed54e263-8213-e611-80db-000d3a2187cd">ВЕЛИКА БАГАЧКА</option>
+                                            <option value="9c28d662-f346-e811-815e-000d3a20e396">ВЕЛИКИЙ БИЧКІВ</option>
+                                            <option value="87301068-7cf1-e911-81aa-000d3a20e396">ВЕЛИКИЙ ДАЛЬНИК</option>
+                                            <option value="43d551e7-25d6-e911-81a6-000d3a20e396">ВЕРХОВИНА</option>
+                                            <option value="b0f7e004-95d8-ea11-81cd-000d3a20e396">ВИЖНИЦЯ</option>
+                                            <option value="367e0b20-4970-e211-9ce1-00155d012a15">ВИНОГРАДІВ</option>
+                                            <option value="d3f02796-4970-e211-9ce1-00155d012a15">ВИШГОРОД</option>
+                                            <option value="a6c0a064-4970-e211-9ce1-00155d012a15">ВИШНЕВЕ</option>
+                                            <option value="a9d53405-f9fe-e811-8188-000d3a20e396">ВІЛЬНОГІРСЬК</option>
+                                            <option value="5ba666a0-745a-e711-8136-000d3a204dc8">ВІЛЬНЯНСЬК</option>
+                                            <option value="2711ddd1-da49-e211-9515-00155d012d0d">ВІННИЦЯ-1</option>
+                                            <option value="4e76547b-4870-e211-9ce1-00155d012a15">ВІННИЦЯ-2</option>
+                                            <option value="6ee8b8cb-4870-e211-9ce1-00155d012a15">ВІННИЦЯ-3</option>
+                                            <option value="567972ef-b375-e611-8104-000d3a204dc8">ВОВЧАНСЬК</option>
+                                            <option value="9cf8f32d-4a70-e211-9ce1-00155d012a15">ВОЗНЕСЕНСЬК</option>
+                                            <option value="c2787a89-1f2b-e611-80eb-000d3a204dc8">ВОЛНОВАХА</option>
+                                            <option value="cf3a6d45-b249-e211-ab75-00155d012d0d">ВОЛОДИМИР-ВОЛИНСЬКИЙ</option>
+                                            <option value="72be882c-f446-e811-815e-000d3a20e396">ВОЛОЧИСЬК</option>
+                                            <option value="35f51830-c1b6-ea11-81cb-000d3a20e396">ВРАДІЇВКА</option>
+                                            <option value="56c00e8d-3458-e811-8160-000d3a20e396">ВУГЛЕДАР</option>
+                                            <option value="03329271-022c-e311-8b0d-00155d037960">ГАДЯЧ</option>
+                                            <option value="82bcadd7-4a70-e211-9ce1-00155d012a15">ГАЙСИН</option>
+                                            <option value="2d82694b-aa37-e611-80eb-000d3a204dc8">ГЕНІЧЕСЬК</option>
+                                            <option value="ef897f5e-e3eb-e711-8150-000d3a20e396">ГІРСЬКЕ</option>
+                                            <option value="aea4931e-8096-e911-81a1-000d3a20e396">ГЛОБИНЕ</option>
+                                            <option value="19b0e937-f6e5-e511-80d6-000d3a2187cd">ГЛУХІВ</option>
+                                            <option value="cbd69291-9828-e911-818b-000d3a20e396">ГОЛА ПРИСТАНЬ</option>
+                                            <option value="5e617884-242f-eb11-81e7-000d3a20e396">ГОЛОВАНІВСЬК</option>
+                                            <option value="353b6d45-b249-e211-ab75-00155d012d0d">ГОРІШНІ ПЛАВНІ (КОМСОМОЛЬСЬК)</option>
+                                            <option value="e850ed1f-01f4-e911-81aa-000d3a20e396">ГОРОДЕНКА</option>
+                                            <option value="45f77e27-0db3-e611-8112-000d3a204dc8">ГОРОДИЩЕ</option>
+                                            <option value="dcec6ba3-fcd4-e711-814d-000d3a242a2c">ГОРОДОК</option>
+                                            <option value="353d14ff-c213-e811-8153-000d3a20e396">ГОРОХІВ</option>
+                                            <option value="a1df0c45-3b47-ea11-81b5-000d3a20e396">ГРАНІТНЕ</option>
+                                            <option value="c2945002-1f84-e711-813d-000d3a23e81c">ГУСЯТИН</option>
+                                            <option value="b535fc21-866a-ea11-81bd-000d3a20e396">ДЕРГАЧІ</option>
+                                            <option value="d93a6d45-b249-e211-ab75-00155d012d0d">ДНІПРО-1 Центр З/Д (Лівий бер)</option>
+                                            <option value="db3a6d45-b249-e211-ab75-00155d012d0d">ДНІПРО-2 Центр З/Д (Прав. бер)</option>
+                                            <option value="dd3a6d45-b249-e211-ab75-00155d012d0d">ДНІПРО-3</option>
+                                            <option value="df3a6d45-b249-e211-ab75-00155d012d0d">ДНІПРО-4</option>
+                                            <option value="7d37ea8b-f779-e411-bf77-000d3a200160">ДНІПРО-5</option>
+                                            <option value="baa53d51-5770-e711-813b-000d3a23e81c">ДНІПРО-6</option>
+                                            <option value="4af56871-f24a-e911-8198-000d3a20e396">ДНІПРО-7</option>
+                                            <option value="455364b9-0db6-ea11-81cb-000d3a20e396">ДНІПРО-8</option>
+                                            <option value="92a3c132-ece9-ea11-81d0-000d3a20e396">ДНІПРО-9</option>
+                                            <option value="7eac1a67-4b47-ea11-81b5-000d3a20e396">ДНІПРОРУДНЕ</option>
+                                            <option value="3df65768-93ff-e411-a12e-000d3a200160">ДОБРОПІЛЛЯ</option>
+                                            <option value="d0bcdeee-fdc8-e211-9902-00155d037919">ДОЛИНА Івано-Франківська обл.</option>
+                                            <option value="f63970ba-9c4a-e211-8b7c-00155d012d0d">ДРОГОБИЧ</option>
+                                            <option value="f73a6d45-b249-e211-ab75-00155d012d0d">ДРУЖКІВКА</option>
+                                            <option value="7902a747-4b70-e211-9ce1-00155d012a15">ДУБНО</option>
+                                            <option value="ca7287a0-4b70-e211-9ce1-00155d012a15">ДУНАЇВЦІ</option>
+                                            <option value="013c6d45-b249-e211-ab75-00155d012d0d">ЕНЕРГОДАР</option>
+                                            <option value="eafffae7-4b70-e211-9ce1-00155d012a15">ЖАШКІВ</option>
+                                            <option value="73e6b489-11b7-e611-8114-000d3a204dc8">ЖИДАЧІВ</option>
+                                            <option value="4eed7cb7-1f6a-e211-81e9-00155d012a15">ЖИТОМИР-1</option>
+                                            <option value="9e3ed126-4c70-e211-9ce1-00155d012a15">ЖИТОМИР-2</option>
+                                            <option value="b1a7d4e0-fa42-e411-b358-000d3a200936">ЖМЕРИНКА</option>
+                                            <option value="d449d959-2616-e811-8155-000d3a20e396">ЖОВКВА</option>
+                                            <option value="a13b5c95-f342-e411-b358-000d3a200936">ЖОВТІ ВОДИ</option>
+                                            <option value="676da222-99ca-ea11-81cc-000d3a20e396">ЗАЛІЩИКИ</option>
+                                            <option value="d1e5c843-d42f-e211-a357-00155d053b5d">ЗАПОРІЖЖЯ-1 Центр З/Д</option>
+                                            <option value="24c7dc46-a36b-e211-81e9-00155d012a15">ЗАПОРІЖЖЯ-2</option>
+                                            <option value="64b39293-4599-e311-9640-00155d015107">ЗАПОРІЖЖЯ-3</option>
+                                            <option value="1b2b2e61-ad7f-e411-bf77-000d3a200160">ЗАПОРІЖЖЯ-4</option>
+                                            <option value="a6cc165f-0473-e911-819e-000d3a20e396">ЗАПОРІЖЖЯ-5</option>
+                                            <option value="b47173c3-4922-ea11-81b2-000d3a20e396">ЗАПОРІЖЖЯ-6</option>
+                                            <option value="1179d5c6-d9c1-ea11-81cb-000d3a20e396">ЗАПОРІЖЖЯ-7</option>
+                                            <option value="c2021287-4c70-e211-9ce1-00155d012a15">ЗВЕНИГОРОДКА</option>
+                                            <option value="2b20471e-29e1-e811-8184-000d3a20e396">ЗДОЛБУНІВ</option>
+                                            <option value="98e4457c-a6be-e911-81a3-000d3a20e396">ЗІНЬКІВ</option>
+                                            <option value="a6c9367d-425d-e511-944a-000d3a200160">ЗМіїВ</option>
+                                            <option value="fcb89b3e-7ea3-e711-8146-000d3a23e81c">ЗНАМ'ЯНКА</option>
+                                            <option value="5aca54b4-f858-e411-afed-000d3a200936">ЗОЛОТОНОША</option>
+                                            <option value="d9bdbc25-2c5d-ea11-81ba-000d3a20e396">ЗОЛОЧІВ</option>
+                                            <option value="053b6d45-b249-e211-ab75-00155d012d0d">ІВАНО-ФРАНКІВСЬК</option>
+                                            <option value="361ad5ec-00cc-ea11-81cc-000d3a20e396">ІВАНО-ФРАНКІВСЬК-2</option>
+                                            <option value="41bb3ff7-4c70-e211-9ce1-00155d012a15">ІЗМАЇЛ</option>
+                                            <option value="9c6520cf-0659-e411-afed-000d3a200936">ІЗЮМ</option>
+                                            <option value="11f9c3e9-0919-eb11-81e3-000d3a20e396">ІЗЯСЛАВ</option>
+                                            <option value="238a0989-0004-e711-8126-000d3a204dc8">ІЛЛІНЦІ</option>
+                                            <option value="f671fe10-b498-e911-81a1-000d3a20e396">ІРПІНЬ</option>
+                                            <option value="f08dc3bc-c31b-e811-8155-000d3a20e396">ІРШАВА</option>
+                                            <option value="ebbfcebc-6b3f-e911-8194-000d3a20e396">КАЛАНЧАК</option>
+                                            <option value="b4ea6f35-918c-e611-8105-000d3a204dc8">КАЛИНІВКА  Вінницька  обл.</option>
+                                            <option value="b9345f48-07c9-e211-9902-00155d037919">КАЛИНІВКА пгт. Київська обл.</option>
+                                            <option value="6ed77ca6-4d70-e211-9ce1-00155d012a15">КАЛУШ</option>
+                                            <option value="23b46b61-606b-e611-8101-000d3a204dc8">КАМІНЬ-КАШИРСЬКИЙ</option>
+                                            <option value="0b3b6d45-b249-e211-ab75-00155d012d0d">КАМ'ЯНЕЦЬ-ПОДІЛЬСЬКИЙ-1</option>
+                                            <option value="eabe7f37-27d7-ea11-81cd-000d3a20e396">КАМ'ЯНКА</option>
+                                            <option value="d73a6d45-b249-e211-ab75-00155d012d0d">КАМ'ЯНСЬКЕ-1 (Правий бер.)</option>
+                                            <option value="4d8f7dbd-507e-ea11-81bf-000d3a20e396">КАМ'ЯНСЬКЕ-2 (Лівий бер.)</option>
+                                            <option value="988c2199-07c9-e211-9902-00155d037919">КАНІВ</option>
+                                            <option value="725a7e55-4e70-e211-9ce1-00155d012a15">КАХОВКА</option>
+                                            <option value="a8dcf6fe-959e-ea11-81c9-000d3a20e396">КЕЛЬМЕНЦІ</option>
+                                            <option value="bdff546c-cb16-e211-89ed-00155d053b5d">КИЇВ-01</option>
+                                            <option value="df3dc7af-9017-e211-89ed-00155d053b5d">КИЇВ-02 Центр З/Д (Левый бер.)</option>
+                                            <option value="668b8259-c82c-e211-9e9c-00155d053b5d">КИЇВ-03</option>
+                                            <option value="63c5e13d-c92c-e211-9e9c-00155d053b5d">КИЇВ-04</option>
+                                            <option value="0b2e8e62-c92c-e211-9e9c-00155d053b5d">КИЇВ-05</option>
+                                            <option value="d21a698a-c92c-e211-9e9c-00155d053b5d">КИЇВ-06</option>
+                                            <option value="12274b5a-ce2c-e211-9e9c-00155d053b5d">КИЇВ-07</option>
+                                            <option value="844fa2e2-ce2c-e211-9e9c-00155d053b5d">КИЇВ-08</option>
+                                            <option value="50ba4901-cf2c-e211-9e9c-00155d053b5d">КИЇВ-09</option>
+                                            <option value="5239181e-cf2c-e211-9e9c-00155d053b5d">КИЇВ-10</option>
+                                            <option value="0c51680d-e932-e211-a357-00155d053b5d">КИЇВ-11 Центр З/Д (Правый бер)</option>
+                                            <option value="420798d9-072c-e311-8b0d-00155d037960">КИЇВ-12</option>
+                                            <option value="d2eb8576-9871-e411-a8ce-000d3a200160">КИЇВ-13</option>
+                                            <option value="71322701-ca82-e511-8f9d-000d3a200160">КИЇВ-14 до 30 кг</option>
+                                            <option value="264d9100-ee1c-e611-80df-000d3a2187cd">КИЇВ-15</option>
+                                            <option value="27141688-2337-e711-812b-000d3a204dc8">КИЇВ-16</option>
+                                            <option value="def8dfc0-e1eb-e711-8150-000d3a20e396">КИЇВ-17</option>
+                                            <option value="9c257460-462c-e811-8158-000d3a20e396">КИЇВ-18</option>
+                                            <option value="d0561c2c-f546-e811-815e-000d3a20e396">КИЇВ-19</option>
+                                            <option value="0f660f16-fb9e-e811-817a-000d3a20e396">КИЇВ-20</option>
+                                            <option value="0905569a-fea6-e911-81a1-000d3a20e396">КИЇВ-21</option>
+                                            <option value="07d085e1-c65e-ea11-81ba-000d3a20e396">КИЇВ-22</option>
+                                            <option value="4e056283-0370-ea11-81bd-000d3a20e396">КИЇВ-23</option>
+                                            <option value="0ff73283-826a-ea11-81bd-000d3a20e396">КИЇВ-24</option>
+                                            <option value="7feb7587-2e91-ea11-81c3-000d3a20e396">КИЇВ-25</option>
+                                            <option value="855a0b15-8f9e-ea11-81c9-000d3a20e396">КИЇВ-26</option>
+                                            <option value="c4012c11-2d03-eb11-81de-000d3a20e396">КИЇВ-27</option>
+                                            <option value="0d31c7b2-312b-e611-80eb-000d3a204dc8">КІВЕРЦІ</option>
+                                            <option value="0c21c97d-95a1-e611-8110-000d3a204dc8">КІЛІЯ</option>
+                                            <option value="067cf340-a1be-e911-81a3-000d3a20e396">КІЦМАНЬ</option>
+                                            <option value="58cd6e33-0c82-e911-81a0-000d3a20e396">КЛЕВАНЬ</option>
+                                            <option value="932371d7-4e70-e211-9ce1-00155d012a15">КОВЕЛЬ-1</option>
+                                            <option value="f34a3484-2045-e611-80ef-000d3a204dc8">КОВЕЛЬ-2</option>
+                                            <option value="34a7743e-1e7b-e611-8104-000d3a204dc8">КОЗЕЛЕЦЬ</option>
+                                            <option value="5e839fbe-bbcc-e911-81a5-000d3a20e396">КОЗИН</option>
+                                            <option value="e3996ed2-06c9-e211-9902-00155d037919">КОЗЯТИН</option>
+                                            <option value="6aedc924-4f70-e211-9ce1-00155d012a15">КОЛОМИЯ</option>
+                                            <option value="e1bcbbea-4f70-e211-9ce1-00155d012a15">КОНОТОП</option>
+                                            <option value="64f7b371-5370-e211-9ce1-00155d012a15">КОРОСТЕНЬ</option>
+                                            <option value="3f1e8b01-4bd7-e211-bafa-00155d037932">КОРОСТИШІВ</option>
+                                            <option value="3d3b6d45-b249-e211-ab75-00155d012d0d">КОРСУНЬ-ШЕВЧЕНКІВСЬКИЙ</option>
+                                            <option value="1bc9b948-e878-ea11-81bf-000d3a20e396">КОРЮКІВКА</option>
+                                            <option value="75b24c16-8565-e811-8163-000d3a20e396">КОСІВ</option>
+                                            <option value="3c09ccc0-2625-e411-844d-000d3a200936">КОСТОПІЛЬ</option>
+                                            <option value="fb2ce03f-5070-e211-9ce1-00155d012a15">КОСТЯНТИНІВКА-1</option>
+                                            <option value="c487ba7d-7aa3-e711-8146-000d3a23e81c">КОСТЯНТИНІВКА-2</option>
+                                            <option value="e2da8d07-5470-e211-9ce1-00155d012a15">КОЦЮБИНСЬКЕ</option>
+                                            <option value="413b6d45-b249-e211-ab75-00155d012d0d">КРАМАТОРСЬК-1</option>
+                                            <option value="1bc35831-1d2f-eb11-81e7-000d3a20e396">КРАМАТОРСЬК-2</option>
+                                            <option value="83cf348a-a037-e611-80eb-000d3a204dc8">КРАСИЛІВ</option>
+                                            <option value="b8f1b9f0-919d-e511-b819-000d3a200160">КРАСНОГРАД Харківська обл.</option>
+                                            <option value="b2ab06bd-285d-ea11-81ba-000d3a20e396">КРЕМЕНЕЦЬ</option>
+                                            <option value="a78c2f89-5470-e211-9ce1-00155d012a15">КРЕМЕНЧУК-1</option>
+                                            <option value="5d364dc4-0b8e-e511-8e46-000d3a200160">КРЕМЕНЧУК-2</option>
+                                            <option value="0a4b2307-f668-ea11-81bc-000d3a20e396">КРЕМЕНЧУК-3</option>
+                                            <option value="5511fdbf-3180-e811-816e-000d3a20e396">КРЕМІННА</option>
+                                            <option value="d84fe4b0-0f7b-ea11-81bf-000d3a20e396">КРИВЕ ОЗЕРО</option>
+                                            <option value="d7e2c6fc-fd2e-e211-9d8a-00155d053b5d">КРИВИЙ РІГ-1</option>
+                                            <option value="cd68ca28-fe2e-e211-9d8a-00155d053b5d">КРИВИЙ РІГ-2</option>
+                                            <option value="3b9ac389-0e8e-e511-8e46-000d3a200160">КРИВИЙ РІГ-3</option>
+                                            <option value="0542fc92-4dd7-e211-bafa-00155d037932">КРОЛЕВЕЦЬ</option>
+                                            <option value="2d3b6d45-b249-e211-ab75-00155d012d0d">КРОПИВНИЦЬКИЙ-1</option>
+                                            <option value="2f3b6d45-b249-e211-ab75-00155d012d0d">КРОПИВНИЦЬКИЙ-2</option>
+                                            <option value="0a1813dd-4dd7-e211-bafa-00155d037932">КУП'ЯНСЬК</option>
+                                            <option value="11fb447a-4a97-e411-bf7a-000d3a200160">КУРАХОВЕ</option>
+                                            <option value="d62d0f57-876e-ea11-81bd-000d3a20e396">КУЧУРГАН</option>
+                                            <option value="bccfe80d-1e2b-e611-80eb-000d3a204dc8">ЛАДИЖИН</option>
+                                            <option value="8841af63-4c60-e911-819c-000d3a20e396">ЛЕБЕДИН</option>
+                                            <option value="f58bf37f-8113-e611-80db-000d3a2187cd">ЛИМАН</option>
+                                            <option value="e168f0df-5470-e211-9ce1-00155d012a15">ЛИСИЧАНСЬК</option>
+                                            <option value="83910e08-0d5e-ea11-81ba-000d3a20e396">ЛІТИН</option>
+                                            <option value="c53fd414-5570-e211-9ce1-00155d012a15">ЛОЗОВА</option>
+                                            <option value="d650bf66-082c-e311-8b0d-00155d037960">ЛОХВИЦЯ</option>
+                                            <option value="65a7f557-5570-e211-9ce1-00155d012a15">ЛУБНИ</option>
+                                            <option value="b1b71c66-206a-e211-81e9-00155d012a15">ЛУЦЬК-1</option>
+                                            <option value="59e8c5e5-5570-e211-9ce1-00155d012a15">ЛУЦЬК-2</option>
+                                            <option value="3539350f-5670-e211-9ce1-00155d012a15">ЛУЦЬК-3</option>
+                                            <option value="4cc60801-f0d0-e711-814d-000d3a242a2c">ЛУЦЬК-4</option>
+                                            <option value="5b3b6d45-b249-e211-ab75-00155d012d0d">ЛЬВІВ-1</option>
+                                            <option value="5d3b6d45-b249-e211-ab75-00155d012d0d">ЛЬВІВ-2</option>
+                                            <option value="39a34a7e-21c5-e711-814a-000d3a242a2c">ЛЬВІВ-4</option>
+                                            <option value="6239b190-e1f1-ea11-81d1-000d3a20e396">ЛЬВІВ-5</option>
+                                            <option value="b30af848-8c1e-eb11-81e3-000d3a20e396">ЛЮБАШІВКА</option>
+                                            <option value="2bb3023d-5670-e211-9ce1-00155d012a15">ЛЮБОМЛЬ</option>
+                                            <option value="c2f88ce9-ae43-e811-815c-000d3a20e396">ЛЮБОТИН</option>
+                                            <option value="9b209ae4-dbe9-e511-80d6-000d3a2187cd">МАКАРІВ</option>
+                                            <option value="d2607272-ce24-e711-8127-000d3a204dc8">МАЛИН</option>
+                                            <option value="4fd3eec3-be1d-e611-80e0-000d3a2187cd">МАРГАНЕЦЬ</option>
+                                            <option value="693b6d45-b249-e211-ab75-00155d012d0d">МАРІУПОЛЬ-1</option>
+                                            <option value="6b3b6d45-b249-e211-ab75-00155d012d0d">МАРІУПОЛЬ-2</option>
+                                            <option value="cdd35b01-092c-e311-8b0d-00155d037960">МАРІУПОЛЬ-3</option>
+                                            <option value="6f9bb3f4-19be-e611-811d-000d3a204dc8">МАРКІВКА</option>
+                                            <option value="e6f3a2c8-2a48-e611-80ef-000d3a204dc8">МЕЖОВА</option>
+                                            <option value="ade990df-a26b-e211-81e9-00155d012a15">МЕЛІТОПОЛЬ</option>
+                                            <option value="b20d2158-d024-e711-8127-000d3a204dc8">МЕРЕФА</option>
+                                            <option value="753b6d45-b249-e211-ab75-00155d012d0d">МИКОЛАЇВ-1</option>
+                                            <option value="773b6d45-b249-e211-ab75-00155d012d0d">МИКОЛАЇВ-2</option>
+                                            <option value="83352b2b-2c49-e811-815e-000d3a20e396">МИКОЛАЇВ-3</option>
+                                            <option value="28c673cb-e536-ea11-81b2-000d3a20e396">МИКОЛАЇВ-ДНІСТРОВСЬКИЙ</option>
+                                            <option value="c6e89bd9-9551-ea11-81b9-000d3a20e396">МИНАЙ</option>
+                                            <option value="b906bc7e-5670-e211-9ce1-00155d012a15">МИРГОРОД Полтавська область</option>
+                                            <option value="13103783-369b-e511-8618-000d3a200160">МИРНОГРАД (ДИМИТРОВ) Дон. обл.</option>
+                                            <option value="cafab84d-5c6b-e611-8101-000d3a204dc8">МІЛОВЕ</option>
+                                            <option value="6f3b6d45-b249-e211-ab75-00155d012d0d">МОГИЛІВ-ПОДІЛЬСЬКИЙ</option>
+                                            <option value="8f8961db-734b-e711-8134-000d3a204dc8">МОСТИСЬКА</option>
+                                            <option value="664d80b9-5670-e211-9ce1-00155d012a15">МУКАЧЕВЕ</option>
+                                            <option value="c8c215c3-8d1e-eb11-81e3-000d3a20e396">НЕМИРІВ</option>
+                                            <option value="bbd8af63-c22c-e311-8b0d-00155d037960">НЕТІШИН</option>
+                                            <option value="1bec5a36-5770-e211-9ce1-00155d012a15">НІЖИН</option>
+                                            <option value="2a6ad588-5770-e211-9ce1-00155d012a15">НІКОПОЛЬ-1</option>
+                                            <option value="2f5c03eb-a5f5-e511-80d6-000d3a2187cd">НОВА ВОДОЛАГА</option>
+                                            <option value="7d3b6d45-b249-e211-ab75-00155d012d0d">НОВА КАХОВКА</option>
+                                            <option value="e869823a-5460-e911-819c-000d3a20e396">НОВА ОДЕСА</option>
+                                            <option value="c3b02c08-fe68-ea11-81bc-000d3a20e396">НОВГОРОД-СІВЕРСЬКИЙ</option>
+                                            <option value="c616cc56-39ff-ea11-81dd-000d3a20e396">НОВІ САНЖАРИ</option>
+                                            <option value="b10de0e8-35c7-e811-817c-000d3a20e396">НОВОАЙДАР</option>
+                                            <option value="49b25f4c-0a2c-e311-8b0d-00155d037960">НОВОВОЛИНСЬК</option>
+                                            <option value="055b7fe6-5770-e211-9ce1-00155d012a15">НОВОГРАД-ВОЛИНСЬКИЙ</option>
+                                            <option value="afc2fa7a-8260-e711-8139-000d3a23e81c">НОВОДНІСТРОВСЬК</option>
+                                            <option value="a580045a-4a54-e811-8160-000d3a20e396">НОВОМОСКОВСЬК-1</option>
+                                            <option value="3e14097e-2825-e411-844d-000d3a200936">НОВОМОСКОВСЬК-2</option>
+                                            <option value="4738624b-0eb3-e611-8112-000d3a204dc8">НОВОПСКОВ</option>
+                                            <option value="d6f61f9e-c5c2-e611-811d-000d3a204dc8">НОВОТРОЇЦЬКЕ (Херсонська обл)</option>
+                                            <option value="ad157122-dc82-e511-8f9d-000d3a200160">НОВОЯВОРІВСЬК</option>
+                                            <option value="15cdf73d-5870-e211-9ce1-00155d012a15">ОБУХІВ</option>
+                                            <option value="a954d680-5870-e211-9ce1-00155d012a15">ОВРУЧ</option>
+                                            <option value="a3f0fa22-8c43-e211-b182-00155d037a52">ОДЕСА-01</option>
+                                            <option value="bf0040ab-5870-e211-9ce1-00155d012a15">ОДЕСА-02</option>
+                                            <option value="d17a94d2-5870-e211-9ce1-00155d012a15">ОДЕСА-03</option>
+                                            <option value="c941f4f7-5870-e211-9ce1-00155d012a15">ОДЕСА-04</option>
+                                            <option value="829fa01a-5970-e211-9ce1-00155d012a15">ОДЕСА-05</option>
+                                            <option value="5f46b1ad-7f5d-e311-9701-00155d015107">ОДЕСА-06</option>
+                                            <option value="42aa34e1-146e-e311-888e-00155d015107">ОДЕСА-07</option>
+                                            <option value="ab997d28-8748-e811-815e-000d3a20e396">ОДЕСА-08</option>
+                                            <option value="d069aa60-c6c5-e911-81a5-000d3a20e396">ОДЕСА-09</option>
+                                            <option value="785d2711-c26d-ea11-81bd-000d3a20e396">ОДЕСА-10</option>
+                                            <option value="f1999201-ebe9-ea11-81d0-000d3a20e396">ОДЕСА-11</option>
+                                            <option value="7374d808-2b7b-ea11-81bf-000d3a20e396">ОЛЕКСАНДРІВКА</option>
+                                            <option value="e627c8fd-d549-e211-9515-00155d012d0d">ОЛЕКСАНДРІЯ</option>
+                                            <option value="9234d937-9c28-e911-818b-000d3a20e396">ОЛЕШКИ</option>
+                                            <option value="2dc167a4-3aef-e511-80d6-000d3a2187cd">ОРІХІВ</option>
+                                            <option value="e363ce11-255d-ea11-81ba-000d3a20e396">ОСТРОГ</option>
+                                            <option value="03690b6c-d649-e211-9515-00155d012d0d">ОХТИРКА</option>
+                                            <option value="4dfb2049-5970-e211-9ce1-00155d012a15">ПАВЛОГРАД</option>
+                                            <option value="953b6d45-b249-e211-ab75-00155d012d0d">ПЕРВОМАЙСЬК Миколаївська обл.</option>
+                                            <option value="155a8cf6-d024-e711-8127-000d3a204dc8">ПЕРВОМАЙСЬКИЙ Харківська обл</option>
+                                            <option value="151ec3cc-1ce5-e911-81a8-000d3a20e396">ПЕРЕЧИН</option>
+                                            <option value="7c1b16af-0a2c-e311-8b0d-00155d037960">ПЕРЕЯСЛАВ</option>
+                                            <option value="528456d7-de07-eb11-81de-000d3a20e396">ПЕТРОПАВЛІВКА</option>
+                                            <option value="f9ac0567-848b-e411-bf77-000d3a200160">ПИРЯТИН</option>
+                                            <option value="ebf82ce8-084b-e911-8198-000d3a20e396">ПІДГОРОДНЕ</option>
+                                            <option value="5ddff9af-9772-ea11-81be-000d3a20e396">ПІСОЧИН</option>
+                                            <option value="d1bc61c0-5370-e211-9ce1-00155d012a15">ПОДІЛЬСК (КОТОВСЬК)</option>
+                                            <option value="b4600125-928c-e611-8105-000d3a204dc8">ПОКРОВ (ОРДЖОНІКІДЗЕ)</option>
+                                            <option value="7b59e6b0-2856-e511-89e5-000d3a200160">ПОКРОВСЬК-1 (КРАСНОАРМІЙСЬК)-1</option>
+                                            <option value="e5e6c4e1-c9bd-e411-8f05-000d3a200160">ПОКРОВСЬК-2 (КРАСНОАРМІЙСЬК)-2</option>
+                                            <option value="496543f0-4265-e611-80fe-000d3a204dc8">ПОЛОГИ</option>
+                                            <option value="0c8b986f-3558-e811-8160-000d3a20e396">ПОЛОННЕ</option>
+                                            <option value="014e35eb-fc2e-e211-9d8a-00155d053b5d">ПОЛТАВА-1</option>
+                                            <option value="226a3c12-0b2c-e311-8b0d-00155d037960">ПОЛТАВА-2</option>
+                                            <option value="0b44d5c2-8ee8-e311-9747-00155d015206">ПОЛТАВА-3</option>
+                                            <option value="cb000385-33c7-e811-817c-000d3a20e396">ПОПАСНА</option>
+                                            <option value="67b2fafc-e678-ea11-81bf-000d3a20e396">ПОПІЛЬНЯ</option>
+                                            <option value="e24dcf3b-d649-e211-9515-00155d012d0d">ПРИЛУКИ</option>
+                                            <option value="201e00d9-617a-ea11-81bf-000d3a20e396">ПРИМОРСЬК</option>
+                                            <option value="0873f763-0e5e-ea11-81ba-000d3a20e396">ПУСТОМИТИ</option>
+                                            <option value="6003d4a2-e5ae-ea11-81cb-000d3a20e396">ПУТИВЛЬ</option>
+                                            <option value="c743e33d-4b06-e711-8126-000d3a204dc8">РАВА-РУСЬКА</option>
+                                            <option value="f3132c20-a65f-ea11-81ba-000d3a20e396">РАДЕХІВ</option>
+                                            <option value="91ea08ce-125e-ea11-81ba-000d3a20e396">РАДИВИЛІВ</option>
+                                            <option value="97c73d84-948e-e511-8e46-000d3a200160">РАТНЕ</option>
+                                            <option value="f2771650-b86c-e411-8576-000d3a200160">РЕНІ</option>
+                                            <option value="9b3b6d45-b249-e211-ab75-00155d012d0d">РІВНЕ-1</option>
+                                            <option value="9d3b6d45-b249-e211-ab75-00155d012d0d">РІВНЕ-2</option>
+                                            <option value="9cfcfa88-ed7d-e811-816a-000d3a20e396">РІВНЕ-3</option>
+                                            <option value="bf1c7536-8aa5-ea11-81ca-000d3a20e396">РІВНЕ-4</option>
+                                            <option value="26b96dcd-53fa-e911-81ae-000d3a20e396">РОГАТИН</option>
+                                            <option value="fc6089b5-86a5-ea11-81ca-000d3a20e396">РОДИНСЬКЕ</option>
+                                            <option value="85f070be-8613-e611-80db-000d3a2187cd">РОЗДІЛЬНА</option>
+                                            <option value="f2c7f5b3-27e1-ea11-81ce-000d3a20e396">РОКИТНЕ (Київська обл.)</option>
+                                            <option value="1ae22a08-155e-ea11-81ba-000d3a20e396">РОКИТНЕ (Рівненська обл.)</option>
+                                            <option value="a57aecfb-4a11-ea11-81b1-000d3a20e396">РОМАНКІВЦІ</option>
+                                            <option value="52c78731-d749-e211-9515-00155d012d0d">РОМНИ</option>
+                                            <option value="89e9918b-5970-e211-9ce1-00155d012a15">РУБІЖНЕ</option>
+                                            <option value="bd2f953a-2084-e711-813d-000d3a23e81c">САВРАНЬ</option>
+                                            <option value="ddacba16-5a70-e211-9ce1-00155d012a15">САМБІР</option>
+                                            <option value="3aab4a02-97ca-ea11-81cc-000d3a20e396">САРАТА</option>
+                                            <option value="ada32e6b-5a70-e211-9ce1-00155d012a15">САРНИ</option>
+                                            <option value="b409081b-1ecb-e811-817c-000d3a20e396">СВАЛЯВА</option>
+                                            <option value="870261ad-c8c5-e911-81a5-000d3a20e396">СВАТОВЕ</option>
+                                            <option value="05b8e933-f458-e411-afed-000d3a200936">СВІТЛОВОДСЬК</option>
+                                            <option value="3fa6a740-2d95-e611-8106-000d3a204dc8">СЕЛИДОВЕ</option>
+                                            <option value="4394b5fa-f168-ea11-81bc-000d3a20e396">СЕМЕНІВКА</option>
+                                            <option value="f1a900ac-5a70-e211-9ce1-00155d012a15">СЄВЄРОДОНЕЦЬК</option>
+                                            <option value="59ba9c34-2925-e411-844d-000d3a200936">СКАДОВСЬК</option>
+                                            <option value="9f6f79f2-12a8-e611-8111-000d3a204dc8">СКВИРА</option>
+                                            <option value="9dc7f2d8-5a70-e211-9ce1-00155d012a15">СЛАВУТА Хмельницька область</option>
+                                            <option value="5564a410-5b70-e211-9ce1-00155d012a15">СЛАВУТИЧ Київська область</option>
+                                            <option value="30da79f0-3053-ea11-81b9-000d3a20e396">СЛОБОЖАНСЬКЕ</option>
+                                            <option value="4f19ffeb-dd2f-e211-a357-00155d053b5d">СЛОВ'ЯНСЬК</option>
+                                            <option value="dcd38e43-5b70-e211-9ce1-00155d012a15">СМІЛА</option>
+                                            <option value="6e081a8f-e978-ea11-81bf-000d3a20e396">СНОВСЬК</option>
+                                            <option value="9a2f98c2-416f-ea11-81bd-000d3a20e396">СОКИРЯНИ</option>
+                                            <option value="b73a83b3-7c9a-ea11-81c8-000d3a20e396">СОЛЕДАР</option>
+                                            <option value="5380ba96-2bed-ea11-81d0-000d3a20e396">СОЛОНЕ</option>
+                                            <option value="f2e88ace-1f41-e711-8134-000d3a204dc8">СТАНИЦЯ ЛУГАНСЬКА</option>
+                                            <option value="f2e013be-c8ad-e711-8148-000d3a242a2c">СТАРИЙ САМБІР</option>
+                                            <option value="41f90ca2-5b70-e211-9ce1-00155d012a15">СТАРОБІЛЬСЬК-1</option>
+                                            <option value="8e6074f7-3ff4-ea11-81d2-000d3a20e396">СТАРОБІЛЬСЬК-2</option>
+                                            <option value="b18bb6be-4d2c-e811-8158-000d3a20e396">СТАРОВОЙТОВЕ</option>
+                                            <option value="2ba21077-c32c-e311-8b0d-00155d037960">СТАРОКОСТЯНТИНІВ</option>
+                                            <option value="b6906e91-034f-e911-8199-000d3a20e396">СТОРОЖИНЕЦЬ</option>
+                                            <option value="69d52514-5c70-e211-9ce1-00155d012a15">СТРИЙ</option>
+                                            <option value="fba3b059-5c70-e211-9ce1-00155d012a15">СУМИ-1</option>
+                                            <option value="c53b6d45-b249-e211-ab75-00155d012d0d">СУМИ-2</option>
+                                            <option value="ad4212ee-0b56-e511-89e5-000d3a200160">СУМИ-3</option>
+                                            <option value="b0c559f4-31c7-e811-817c-000d3a20e396">СУТИСКИ</option>
+                                            <option value="ef2960f1-fb67-e911-819d-000d3a20e396">ТАЛЬНЕ</option>
+                                            <option value="49de8ff6-4906-e711-8126-000d3a204dc8">ТАРАЩА</option>
+                                            <option value="742aac51-1bbe-e611-811d-000d3a204dc8">ТАТАРБУНАРИ</option>
+                                            <option value="df63971b-8896-ea11-81c3-000d3a20e396">ТЕПЛИК</option>
+                                            <option value="7ee2b2a0-472c-e811-8158-000d3a20e396">ТЕРЕБОВЛЯ</option>
+                                            <option value="7511bc7f-5c70-e211-9ce1-00155d012a15">ТЕРНОПІЛЬ-1</option>
+                                            <option value="e1a3e5ae-5c70-e211-9ce1-00155d012a15">ТЕРНОПІЛЬ-2</option>
+                                            <option value="0cb194f9-28e1-e511-80d4-000d3a2187cd">ТОКМАК</option>
+                                            <option value="9f144660-10b7-e611-8114-000d3a204dc8">ТОМАКІВКА</option>
+                                            <option value="eb54994e-becd-ea11-81cc-000d3a20e396">ТОМАШПІЛЬ</option>
+                                            <option value="ade33fa1-983f-e711-8134-000d3a204dc8">ТОРЕЦЬК (ДЗЕРЖИНСК)</option>
+                                            <option value="69598e60-86d8-ea11-81cd-000d3a20e396">ТОРЧИН</option>
+                                            <option value="2ce5120b-9fa1-ea11-81ca-000d3a20e396">ТРОСТЯНЕЦЬ (Вінницька обл.)</option>
+                                            <option value="04154518-6aef-e511-80d6-000d3a2187cd">ТРОСТЯНЕЦЬ (Сумська обл.)</option>
+                                            <option value="37fc51eb-004f-e911-8199-000d3a20e396">ТРУСКАВЕЦЬ</option>
+                                            <option value="90f2e8f2-94d8-ea11-81cd-000d3a20e396">ТУЛЬЧИН</option>
+                                            <option value="3163a12f-8abf-ea11-81cb-000d3a20e396">ТУРІЙСЬК</option>
+                                            <option value="ae5f0615-be69-ea11-81bc-000d3a20e396">ТУРКА</option>
+                                            <option value="064527c3-e118-e511-9ab9-000d3a200160">ТЯЧІВ</option>
+                                            <option value="f54909da-5c70-e211-9ce1-00155d012a15">УЖГОРОД-1</option>
+                                            <option value="663a2b97-d19e-e711-8144-000d3a23e81c">УЖГОРОД-2</option>
+                                            <option value="e97aa605-5d70-e211-9ce1-00155d012a15">УМАНЬ-1</option>
+                                            <option value="cb726c26-5d70-e211-9ce1-00155d012a15">УМАНЬ-2</option>
+                                            <option value="9b591f81-b75b-e211-b130-00155d03790e">ФАСТІВ</option>
+                                            <option value="efbecb4b-da49-e211-9515-00155d012d0d">ХАРКІВ-01</option>
+                                            <option value="d2654576-da49-e211-9515-00155d012d0d">ХАРКІВ-02</option>
+                                            <option value="a12e8f52-5d70-e211-9ce1-00155d012a15">ХАРКІВ-03</option>
+                                            <option value="5f2af375-5d70-e211-9ce1-00155d012a15">ХАРКІВ-04-Барабашова</option>
+                                            <option value="3dd9da93-5d70-e211-9ce1-00155d012a15">ХАРКІВ-05</option>
+                                            <option value="a38507dd-5d70-e211-9ce1-00155d012a15">ХАРКІВ-06-Лоск</option>
+                                            <option value="27e30668-0c2c-e311-8b0d-00155d037960">ХАРКІВ-07</option>
+                                            <option value="5e310dc7-0c2c-e311-8b0d-00155d037960">ХАРКІВ-08</option>
+                                            <option value="c8ea2b15-0d2c-e311-8b0d-00155d037960">ХАРКІВ-09-Лоск</option>
+                                            <option value="ee90da93-f36e-e311-888e-00155d015107">ХАРКІВ-10</option>
+                                            <option value="fe2ec31a-ea79-e411-bf77-000d3a200160">ХАРКІВ-11</option>
+                                            <option value="21285165-c7c5-e911-81a5-000d3a20e396">ХАРКІВ-12</option>
+                                            <option value="e73b6d45-b249-e211-ab75-00155d012d0d">ХЕРСОН-1</option>
+                                            <option value="e93b6d45-b249-e211-ab75-00155d012d0d">ХЕРСОН-2</option>
+                                            <option value="906d654e-178e-e711-8141-000d3a23e81c">ХЕРСОН-3</option>
+                                            <option value="cd085422-996e-ea11-81bd-000d3a20e396">ХЕРСОН-4</option>
+                                            <option value="eb3b6d45-b249-e211-ab75-00155d012d0d">ХМЕЛЬНИЦЬКИЙ-1</option>
+                                            <option value="ed3b6d45-b249-e211-ab75-00155d012d0d">ХМЕЛЬНИЦЬКИЙ-2-Речовий ринок</option>
+                                            <option value="1584818d-1b2b-e611-80eb-000d3a204dc8">ХМЕЛЬНИЦЬКИЙ-3</option>
+                                            <option value="498409b0-8d63-e611-80fd-000d3a204dc8">ХМІЛЬНИК</option>
+                                            <option value="23f46e2b-0411-e511-b3b5-000d3a200160">ХОРОЛ</option>
+                                            <option value="abc23f19-5e70-e211-9ce1-00155d012a15">ХУСТ</option>
+                                            <option value="8e08c345-961e-eb11-81e3-000d3a20e396">ЧАБАНИ</option>
+                                            <option value="8e9d0d60-c6c2-e611-811d-000d3a204dc8">ЧАПЛИНКА</option>
+                                            <option value="f13b6d45-b249-e211-ab75-00155d012d0d">ЧЕРВОНОГРАД Львівська обл.</option>
+                                            <option value="f33b6d45-b249-e211-ab75-00155d012d0d">ЧЕРКАСИ-1</option>
+                                            <option value="e7d1a773-0d2c-e311-8b0d-00155d037960">ЧЕРКАСИ-2</option>
+                                            <option value="f93b6d45-b249-e211-ab75-00155d012d0d">ЧЕРНІВЦІ-1</option>
+                                            <option value="fb3b6d45-b249-e211-ab75-00155d012d0d">ЧЕРНІВЦІ-2</option>
+                                            <option value="be8592f5-2cbc-ea11-81cb-000d3a20e396">ЧЕРНІВЦІ-3</option>
+                                            <option value="f53b6d45-b249-e211-ab75-00155d012d0d">ЧЕРНІГІВ-1</option>
+                                            <option value="f73b6d45-b249-e211-ab75-00155d012d0d">ЧЕРНІГІВ-2</option>
+                                            <option value="df15df9e-c21b-e811-8155-000d3a20e396">ЧЕРНІГІВ-3</option>
+                                            <option value="9e0b4a63-607a-ea11-81bf-000d3a20e396">ЧЕРНІГІВКА</option>
+                                            <option value="c4883432-b705-e811-8153-000d3a20e396">ЧИГИРИН</option>
+                                            <option value="34f45c21-b6ad-e811-817b-000d3a20e396">ЧОП</option>
+                                            <option value="02d59fe2-3668-ea11-81bb-000d3a20e396">ЧОРНОБАЙ</option>
+                                            <option value="26537f6b-4d70-e211-9ce1-00155d012a15">ЧОРНОМОРСЬК (ІЛЛІЧІВСЬК)</option>
+                                            <option value="ae629271-13a8-e611-8111-000d3a204dc8">ЧОРТКІВ</option>
+                                            <option value="9049d81f-5731-e711-812b-000d3a204dc8">ЧУГУЇВ</option>
+                                            <option value="377839e1-2725-e911-818b-000d3a20e396">ШАЦЬК</option>
+                                            <option value="fb25977a-8baf-e911-81a1-000d3a20e396">ШЕВЧЕНКОВЕ</option>
+                                            <option value="2dff277c-5e70-e211-9ce1-00155d012a15">ШЕПЕТІВКА</option>
+                                            <option value="f7b8d8a1-a896-ea11-81c4-000d3a20e396">ШИШАКИ</option>
+                                            <option value="43d97ea3-5e70-e211-9ce1-00155d012a15">ШОСТКА</option>
+                                            <option value="d7883ebf-2a5d-ea11-81ba-000d3a20e396">ШУМСЬК</option>
+                                            <option value="b9907ecc-a90f-eb11-81e0-000d3a20e396">ЩАСЛИВЕ</option>
+                                            <option value="0ac775c3-963f-e711-8134-000d3a204dc8">ЩАСТЯ</option>
+                                            <option value="000102ad-4564-ea11-81ba-000d3a20e396">ЮЖНЕ</option>
+                                            <option value="c15ab4da-5e70-e211-9ce1-00155d012a15">ЮЖНОУКРАЇНСЬК</option>
+                                            <option value="b1b91912-c7ad-e711-8148-000d3a242a2c">ЯВОРІВ</option>
+                                            <option value="52957c20-4189-ea11-81c3-000d3a20e396">ЯКИМІВКА</option>
+                                            <option value="992c23ce-4d7b-e611-8104-000d3a204dc8">ЯМПІЛЬ</option>
+                                        </select>
+                                        <select id="description_id" style="display: none;">
+                                        </select>
+                                        <select id="score_id" style="display: none;">
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <!-- пополнение телефона -->
+                            <div id="phone_enter_block" class="phone_block" style="">
+                                <div class="phone_total_sum" ng-show="firstLoadSum">Загальна сума для поповнення 100  грн.</div>
+                                <!-- <div class="phone_total_sum ng-binding ng-hide" ng-show="secondLoadSum">Загальна сума для поповнення 100  грн.</div> -->
+        
+        
+                                <!-- Результат добавления одного или нескольких номеров для пополнения  -->
+                                <div ng-repeat="(itemIndex, item) in phoneList.items" class="ng-scope">
+                                    <div class="phone_line">
+                                        <div class="phone_number ng-binding">0665748488</div>
+                                        <div style="display: flex; align-items: center;">
+                                            <div class="phone_sum ng-binding">100</div>
+                                            <p> грн</p>
+                                        </div>
+                                        <div ng-click="delete_phone(itemIndex, 0)" class="phone_delete">
+                                            <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 1L10.5 10.5M10.5 1L1 10.5" stroke="#FF0000"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div id="ttlSm" style="display: none;" class="ng-binding">100</div>
+                                <div ng-show="inputAccess">
+                                    <input class="phone_input ng-pristine ng-untouched ng-valid" type="text" ng-model="phone" placeholder="Номер телефону">
+                                    <input class="phone_input ng-pristine ng-untouched ng-valid ng-valid-min" type="number" ng-model="sum" min="0" placeholder="Сума">
+                                    <div ng-click="add_phone(phone, sum, 0)" class="phone_add change_button change_button--white">
+                                        <span>+</span>
+                                        Додати
+                                    </div>
+                                </div>
+                    
+                                <!-- ngRepeat: (itemIndex, item) in phoneList.items -->
+                                <textarea id="phone_comment" hidden="hidden" class="ng-binding"></textarea>
+                            </div>
+        
+                            <!-- Одержувач -->
+                            <div class="recipient_wrapper">
+                                <label for="recipient">Одержувач</label>
+                                <input id="recipient" class="card_shop_user_input" type="text" value="Іванчук Олег Вікторович" disabled="disabled">
+                            </div>
+        
+                            <!-- Бензин -->
+                            <div id="oil_enter_block" class="oil_line" data-ng-init="init(0)" style="display: block;">
+                                <div>
+                                    <div class="oil_title">Вид палива:</div>
+                                    
+                                    <div class="oil_item">
+                                        <div class="oil_label_block" ng-style="active_block(oil_95)">
+                                            <div class="oil_check">
+                                                <input type="checkbox" ng-model="oil_95" ng-click="check_95(0)" id="o_95_ch" class="ng-pristine ng-untouched ng-valid">
+                                            </div>
+                                            <div class="oil_label" ng-click="oil_95_change(!oil_95, 0)">95</div>
+                                        </div>
+        
+                                        <div ng-click="change_input_value(1, 0, 0)" class="sign_input sign_input--active">-</div>
+                                        <input type="number" class="oil_number ng-pristine ng-untouched ng-valid ng-valid-min" id="o_95_inp" ng-model="oil_95_text" ng-focus="checking_oil(0)" ng-blur="set_zero(1)" ng-disabled="!oil_95" min="0" ng-change="chng(0, 1)" value="0">
+                                        <div ng-click="change_input_value(1, 1, 0)" class="sign_input sign_input--active plus_right">+</div>
+                                    </div>
+                                    
+                                    <div class="oil_item">
+                                        <div class="oil_label_block" ng-style="active_block(oil_dt)" style="border: none;">
+                                            <div class="oil_check">
+                                                <input type="checkbox" ng-model="oil_dt" ng-click="check_dt(0)" id="o_dt_ch" class="ng-pristine ng-untouched ng-valid">
+                                            </div>
+                                            <div class="oil_label" ng-click="oil_dt_change(!oil_dt, 0)">ДП</div>
+                                        </div>
+        
+                                        <div ng-click="change_input_value(2, 0, 0)" class="sign_input sign_input--active">-</div>
+                                        <input type="number" class="oil_number ng-pristine ng-untouched ng-valid ng-valid-min" id="o_dt_inp" ng-model="oil_dt_text" ng-focus="checking_oil(0)" ng-blur="set_zero(2)" ng-disabled="!oil_dt" min="0" ng-change="chng(0, 2)" disabled="disabled" value="0">
+                                        <div ng-click="change_input_value(2, 1, 0)" class="sign_input sign_input--active plus_right">+</div>
+                                    </div>
+                                </div>
+                                <textarea id="oil_comment" hidden="hidden" class="ng-binding">95: 1; ДТ: 0</textarea>
+                            </div>
+                        </div>
+        
+                        <div class="change_button popup_close p-order-done_open" style="margin-top: 20px;" title="Close" aria-label="Close">Замовити</div>
+                    </form>
+                </div>
+
+                <!-- Pop Up Ошибка Недостатньо балів для обміну! -->
+                <div id="p-error-no-points">
+                    <form class="popup-main popup-notify">
+                        <div>
+                            <h3 class="popup-notify__title">Недостатньо балів для обміну!</h3>
+                            <div class="popup-btn-group">
+                                <button class="error-no-points_close change_button">Ок</button>
+                                <img class="popup-icon" src="img/popup-error.svg" alt="error icon">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Pop Up Ви впевнені, що хочете обміняти бали на товар? -->
+                <div id="p-are-u-sure">
+                    <form class="popup-main popup-notify">
+                        <div>
+                            <p>Ви впевнені, що хочете обміняти бали на товар?</p>
+                            <div class="popup-btn-group">
+                                <button class="error-no-points_close change_button">Ок</button>
+                                <img class="popup-icon" src="img/popup-error.svg" alt="error icon">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Pop Up У Вас залишилося 100 грн для поповнення мобільного. -->
+                <div id="p-residue-mobile">
+                    <form class="popup-main popup-notify">
+                        <div>
+                            <p>У Вас залишилося <span>100</span> грн для поповнення мобільного.
+                                Використайте їх.</p>
+                            <div class="popup-btn-group">
+                                <button class="error-no-points_close change_button">Ок</button>
+                                <img class="popup-icon" src="img/popup-error.svg" alt="error icon">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Pop Up Заявка на обмін прийнята! -->
+                <div id="p-order-done">
+                    <form class="popup-main popup-notify">
+                        <div>
+                            <h3 class="popup-notify__title">Заявка на обмін прийнята!</h3>
+                            <div class="popup-btn-group">
+                                <button class="error-no-points_close change_button">Ок</button>
+                                <img class="popup-icon" src="img/popup-done.svg" alt="error icon">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+
+
+                <!-- Можно удалить -->
+                <div>
+                    <p>Примеры поп-апов</p>
+                    <div>
+                        <div class="p-error-no-points_open" style="margin-right: 10px;">click1</div>
+                        <div class="p-are-u-sure_open" style="margin-right: 10px;">click2</div>
+                        <div class="p-residue-mobile_open" style="margin-right: 10px;">click3</div>
+                        <div class="p-order-done_open" style="margin-right: 10px;">click4</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+
+        <!-- ADD JQUERY HERE -->
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+        <!-- Pop up JS -->
+        <script src="https://cdn.jsdelivr.net/gh/vast-engineering/jquery-popup-overlay@2/jquery.popupoverlay.min.js"></script>
+        <script src="js/components/popup.js" type="text/javascript"></script>
+        <!-- Main.js -->
+        <script src="js/main.js" type="text/javascript"></script>
+    </body>
+</html>
